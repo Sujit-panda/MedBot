@@ -1,0 +1,8 @@
+Flask
+psycopg2
+flask-cors
+langchain
+langchain-core
+sentence-transformers
+pinecone-client
+google-generativeai
