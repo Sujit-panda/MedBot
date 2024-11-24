@@ -12,10 +12,10 @@ from sentence_transformers import SentenceTransformer
 from pinecone import Pinecone
 import openai
 
-openai.api_key = "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"
-#pinecone_api_key = 'cff06254-079e-4469-be51-342d2bd0f05b'
+openai.api_key = "Openai API key"
 
-pc=Pinecone(api_key='6fff7d16-e9f7-4344-b20c-02c3811047db')
+
+pc=Pinecone(api_key='Pinecone API')
 index = pc.Index('project')
 
 
@@ -24,7 +24,7 @@ index = pc.Index('project')
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Initialize LangChain components
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="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")
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="Openai API key")
 buffer_memory = ConversationBufferWindowMemory(k=3, return_messages=True)
 
 system_msg_template = SystemMessagePromptTemplate.from_template(

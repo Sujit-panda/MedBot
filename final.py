@@ -13,11 +13,13 @@ app = Flask(__name__)
 CORS(app)
 
 # Set Google Gemini and Pinecone API keys
-genai.configure(api_key="AIzaSyAqPZGrv4ZELWiEt0spuY-od33-GMSk7DY")
+genai.configure(api_key="Google Gemini API")
+# Not replace 'your-pinecone-api-key' to your Pinecone API
 pinecone_api_key = 'your-pinecone-api-key'
 
 # Initialize Pinecone
-pc = Pinecone(api_key="f8c65da6-af5b-407b-8aa5-6ba3cc89af91")
+#replace 'Write your Pinecone API' to your Pinecone API.
+pc = Pinecone(api_key="Write your Pinecone API")
 index = pc.Index('project')  # Initialize Pinecone index for querying
 
 # Initialize SentenceTransformer model for encoding user input
