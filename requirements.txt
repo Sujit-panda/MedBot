@@ -4,5 +4,5 @@ flask-cors
 langchain
 langchain-core
 sentence-transformers
-pinecone-client
+pinecone
 google-generativeai
