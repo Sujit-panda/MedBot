@@ -1,3 +1,5 @@
+import torch
+torch.set_grad_enabled(False)
 from flask import Flask, request, jsonify, render_template, session
 from langchain_core.runnables import RunnableWithMessageHistory, Runnable
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
