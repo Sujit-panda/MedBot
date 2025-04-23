@@ -134,7 +134,7 @@ def find_match(input_text):
         if 'image_analysis' in session:
             input_text += "\nImage Context: " + session['image_analysis']
         
-        input_em = model.encode(input_text).tolist()
+        input_em = model.encode([input_text], show_progress_bar=False, batch_size=8).tolist()
         result = index.query(vector=input_em, top_k=2, includeMetadata=True)
         
         if 'matches' in result and len(result['matches']) >= 2:
