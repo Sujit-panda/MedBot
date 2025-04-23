@@ -6,3 +6,4 @@ langchain-core
 sentence-transformers
 pinecone
 google-generativeai
+gunicorn
